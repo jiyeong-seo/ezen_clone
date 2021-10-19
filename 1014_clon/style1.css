@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* 기본 설정
+================================================== */
+
+/* 문서 전체 크기, 여백 설정
+-------------------------------------------------- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Float 처리 클래스 
+-------------------------------------------------- */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  float: none;
+  clear: both;
+}
+
+/* 상단 메뉴바 영역 설정
+================================================== */
+
+/* 상단 메뉴바 크기, 여백 설정
+-------------------------------------------------- */
+.nav {
+  background-color: darkkhaki;
+  width: 100%;
+}
+.nav > a {
+  font-size: 17px;
+  text-decoration: none;
+  display: inline-block;
+  width: 80px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 본문 영역 처리
+================================================== */
+
+/* 섹션1 이미지 영역 설정
+-------------------------------------------------- */
+section {
+    width: 100%;
+    height: 100%;
+}
+.s1-img {
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-image: url(img/parallax1.jpg);
+    background-position: center;
+    opacity: 0.75;
+    background-attachment: fixed;
+
+}
+
+/* HOME 영역 >
+-------------------------------------------------- */

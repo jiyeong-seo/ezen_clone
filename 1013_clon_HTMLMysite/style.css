@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+/* 기본 설정
+================================================== */
+/* 문서 전체 크기, 여백 설정
+-------------------------------------------------- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Float 처리 클래스
+-------------------------------------------------- */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  float: none;
+  clear: both;
+}
+
+/* 메뉴바 영역 설정
+================================================== */
+/* 메뉴바 크기, 여백 설정
+-------------------------------------------------- */
+#site-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* 메뉴바 > 상단 메뉴영역 넓이 제한
+-------------------------------------------------- */
+#site-header .container {
+  width: 1200px;
+  margin: auto;
+}
+
+/* 메뉴바 > 메뉴영역 > 좌측 Mystyle 로고
+-------------------------------------------------- */
+#site-header h1 {
+  font-size: 32px;
+  color: #fff;
+  padding: 13px;
+}
+
+/* 메뉴바 > 메뉴영역 > 우측  메뉴 목록 
+-------------------------------------------------- */
+#site-header .menu li {
+  font-size: 20px;
+  color: #fff;
+  margin: 17px 20px;
+}
+
+/* 슬라이드 영역 설정
+================================================== */
+/* 슬라이드 크기, 여백 설정
+-------------------------------------------------- */
+#slide-container {
+  width: 100%;
+  height: 100%;
+}
+
+#slide-container .slides-container {
+  width: 100%;
+  height: 100%;
+}
+
+#slide-container .slides-container li {
+  height: 100%;
+}
+
+/* 두개 이상의 요소(이미지,텍스트)를 가운데로 놓기 위한 처리 - 두개의 요소를 감쌀 <div> 두 가지의 처리
+-------------------------------------------------- */
+#slide-container .slides-container li .slide-contents {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  display: table;
+}
+
+#slide-container .slides-container li .slide-contents .slide-contents-cell {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* 텍스트를 가운데로 놓는 처리
+-------------------------------------------------- */
+.slide-contents-cell h1 {
+  font-size: 96px;
+  font-weight: bold;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.slide-contents-cell p {
+  font-size: 24px;
+  padding: 0px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* 좌우 화살표 영역 처리
+-------------------------------------------------- */
+.slides-navigation {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.slides-navigation a {
+  display: block;
+  width: 50px;
+  height: 82px;
+  background-image: url("img/arrow.png");
+  text-indent: -10000px;
+  overflow: hidden;
+}
+
+/* 화살표 위치 처리
+ -------------------------------------------------- */
+.slides-navigation a:first-child {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  margin-top: -41px;
+}
+
+.slides-navigation a:last-child {
+  background-position: -50px center;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  margin-top: -41px;
+}
+
+/* 이미지 목록 영역 설정
+================================================== */
+/* 이미지 목록 크기, 여백 설정
+-------------------------------------------------- */
+#image-list-container {
+  width: 1100px;
+  margin: 20px auto;
+  list-style: none;
+}
+
+/* 이미지 목록 영역 분할 
+-------------------------------------------------- */
+#image-list-container li {
+  width: 33.3%;
+  height: 250px;
+}
+
+#image-list-container li .item-box {
+  width: auto;
+  height: 230px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#image-list-container li .item-box .item-box-pd {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 이미지,텍스트 처리 
+-------------------------------------------------- */
+#image-list-container li .item-box .item-box-pd a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.1s;
+}
+
+#image-list-container li .item-box .item-box-pd a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#image-list-container li .item-box a:hover > span {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 두개 이상의 요소(이미지,텍스트)를 가운데로 놓기 위한 처리 - 두개의 요소를 감쌀 <span>두 가지의 처리 
+-------------------------------------------------- */
+#image-list-container li .item-box a > span {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#image-list-container li .item-box a > span > span {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* 제목 폰트 처리
+ -------------------------------------------------- */
+#image-list-container li .item-box a h3 {
+  font-size: 22px;
+}
+
+/* 본문 폰트 처리 
+-------------------------------------------------- */
+#image-list-container li .item-box a p {
+  font-size: 16px;
+  padding-top: 12px;
+}
