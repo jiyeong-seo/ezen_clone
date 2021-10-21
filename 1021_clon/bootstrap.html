@@ -21,7 +21,7 @@
     ></script>
     <!-- style.css -->
     <link rel="stylesheet" type="text/css" href="style.css" />
-    
+
     <title>bootstrap</title>
   </head>
 
@@ -32,30 +32,45 @@
       <div class="container">
         <!-- 메뉴 제목 -->
         <div class="navbar-header">
+          <!-- 모바일에서만 표시되는 햄버거 버튼 -->
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
           <a href="#" class="navbar-brand">Project name</a>
         </div>
 
-        <!-- form 영역 -->
-        <form action="" method="get" class="navbar-form navbar-right">
-          <div class="form-group">
-            <input
-              type="email"
-              name="email"
-              class="form-control"
-              placeholder="email"
-            />
-          </div>
-          <div class="form-group">
-            <input
-              type="password"
-              name="password"
-              class="form-control"
-              placeholder="password"
-            />
-          </div>
+        <!-- 모바일 해상도로 변경될 때 아래 div의 id값을 data-target 속성 값으로 입력한 toggle과 교체될 영역 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- form 영역 -->
+          <form action="" method="get" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="email"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                placeholder="password"
+              />
+            </div>
 
-          <button type="submit" class="btn btn-success">Sing in</button>
-        </form>
+            <button type="submit" class="btn btn-success">Sing in</button>
+          </form>
+        </div>
       </div>
     </div>
 
