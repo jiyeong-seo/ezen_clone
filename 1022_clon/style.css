@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* 전체 영역
+======================================== */
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+/* nav 영역
+======================================== */
+/* nav 배경 처리 */
+.navbar {
+  background-image: none;
+}
+/* 사이드바 영역
+======================================== */
+/* 사이드바 설정 */
+.sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+}
+.nav-sidebar a {
+    display: block;
+    width: 100%; 
+}
+/* 사이드바 ul 간격 설정 */
+.nav-sidebar {
+    margin: 0 -21px 20px -20px;
+}
+/* 본문 영역
+======================================== */
+/* 본문 영역 설정 */
+.main {
+  padding: 30px 40px 0px 40px;
+}
+.main-row {
+  margin: 0 -15px 30px -15px;
+  text-align: center;
+}
+/* 본문 이미지 설정,텍스트 설정 */
+.dash-image {
+  margin-bottom: 20px;
+}
+.dash-image img {
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  max-height: 100%;
+}
+/* 테이블 제목 설정 */
+h2 {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 10px;
+}
